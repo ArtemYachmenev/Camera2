@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextureView
-        android:id="@+id/texture"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp" />
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:background="#ff0000">
+
+        <TextureView
+            android:id="@+id/texture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+
+            android:scaleType="fitCenter"
+
+
+            />
 
     <Button
         android:id="@+id/btn_takepicture"
@@ -23,7 +34,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:text="photo" />
+        android:text="photo"
+        android:visibility="gone" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -32,23 +44,29 @@
         android:layout_alignRight="@id/texture"
 
 
-        android:onClick="changingTheCamera"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="22dp"
+        android:onClick="changingTheCamera"
         app:srcCompat="@android:drawable/ic_menu_rotate" />
+    </RelativeLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:background="#FFFFFF" />
 
     <!--    <Button-->
-<!--        android:id="@+id/btnGallery"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:layout_marginBottom="102dp"-->
-<!--        android:text="Gallery" />-->
+    <!--        android:id="@+id/btnGallery"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:layout_marginBottom="102dp"-->
+    <!--        android:text="Gallery" />-->
 
 
-</RelativeLayout>
+</LinearLayout>
 <!--    <TextureView-->
 <!--        android:id="@+id/texture"-->
 <!--        android:layout_width="match_parent"-->
